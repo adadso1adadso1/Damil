@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>РОЗЫСК | МВД</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Courier New', Courier, monospace; }
+  
+  body { 
+    background-color: #0a0e17;
+    background-image: 
+      linear-gradient(rgba(10, 14, 23, 0.9), rgba(10, 14, 23, 0.95)),
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+    color: #d1d5db; 
+    min-height: 100vh; 
+    display: flex; flex-direction: column; align-items: center;
+    padding: 20px;
+  }
+
+  .header { text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; }
+  .header h1 { color: #fff; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; }
+  .header p { color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: bold; letter-spacing: 1px; }
+
+  .card {
+    background: #111827; border: 2px solid #374151; border-radius: 8px;
+    width: 100%; max-width: 600px; overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    position: relative;
+  }
+
+  .top-bar {
+    background: #991b1b; color: #fff; text-align: center;
+    padding: 12px; font-size: 20px; font-weight: bold; letter-spacing: 3px;
+    text-transform: uppercase; animation: blink 1.5s infinite;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+  .photo-container {
+    width: 100%; height: auto; border-bottom: 2px solid #374151;
+    background: #000; display: flex; justify-content: center; overflow: hidden;
+  }
+  .photo-container img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+  .info-block { padding: 20px; }
+  
+  .info-row {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px dashed #374151; padding: 12px 0;
+  }
+  .info-row:last-child { border-bottom: none; }
+  
+  .info-label { color: #9ca3af; font-size: 13px; text-transform: uppercase; font-weight: bold; }
+  .info-value { color: #fff; font-size: 15px; text-align: right; font-weight: bold; }
+  .info-value.danger { color: #ef4444; }
+
+  .reward {
+    background: #1f2937; border-top: 2px solid #374151; text-align: center; padding: 20px;
+  }
+  .reward p { color: #9ca3af; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .reward h2 { color: #fbbf24; font-size: 26px; font-weight: bold; text-shadow: 0 0 10px rgba(251, 191, 36, 0.4); }
+
+  .footer {
+    margin-top: 24px; text-align: center; color: #6b7280; font-size: 11px; line-height: 1.5;
+  }
+  .footer strong { color: #ef4444; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>МВД ПО РЕСПУБЛИКЕ</h1>
+    <p>ОФИЦИАЛЬНАЯ БАЗА РОЗЫСКА</p>
+  </div>
+
+  <div class="card">
+    <div class="top-bar">РОЗЫСКИВАЕТСЯ</div>
+    
+    <div class="photo-container">
+      <img src="wanted.jpg" alt="Фото подозреваемого" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding:50px;text-align:center;color:#555;\'>ФОТО НЕ ЗАГРУЖЕНО<br><small>Загрузите wanted.jpg в репозиторий</small></div>'">
+    </div>
+
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Позывной / ФИО:</span>
+        <span class="info-value">Damil (Добр)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Статус:</span>
+        <span class="info-value danger">В БЕГАХ</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Статья:</span>
+        <span class="info-value">Ст. 228 УК РФ (Незаконный оборот)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Особые приметы:</span>
+        <span class="info-value">Форма МВД, черная куртка</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Опасность:</span>
+        <span class="info-value danger">ВООРУЖЕН И ОПАСЕН</span>
+      </div>
+    </div>
+
+    <div class="reward">
+      <p>Вознаграждение за информацию о местонахождении:</p>
+      <h2>500,000 РУБ.</h2>
+    </div>
+  </div>
+
+  <div class="footer">
+    При обнаружении немедленно сообщите по номеру <strong>102</strong><br>
+    Конфиденциальность гарантируется.
+  </div>
+
+</body>
+  </html>
